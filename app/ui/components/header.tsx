@@ -41,7 +41,7 @@ const Header = ({
         id="open-menu-btn"
         className=" md:hidden xl:hidden bg-transparent border-none hover:cursor-pointer absolute right-3 top-[13px]"
       >
-        <img src={menuIconUrl} alt="Icon menu" />
+        <Image src={menuIconUrl} alt="Icon menu open" width={24} height={21} />
       </button>
 
       {/*Nav below is hidden */}
@@ -55,7 +55,12 @@ const Header = ({
           id="close-menu-btn"
           className="md:hidden bg-transparent border-none hover:cursor-pointer absolute right-7 top-10 "
         >
-          <img src={closeMenuIconUrl} alt="Icon menu close" />
+          <Image
+            src={closeMenuIconUrl}
+            alt="Icon menu close"
+            width={24}
+            height={21}
+          />
         </button>
         <ul className=" md:flex md:absolute md:gap-9  md:right-0 md:px-10 md:top-0 md:h-20   md:pt-6 md:bg-white/5 md:backdrop-blur-lg lg:px-36 lg:pt-0 ">
           {links.map((link, index) => (
