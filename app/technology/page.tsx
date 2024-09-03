@@ -6,8 +6,9 @@ import React, { Fragment, useState } from "react";
 import Typewriter from "typewriter-effect";
 import BackgroundImage from "../ui/components/backgroundImage";
 import PageHeader from "../ui/components/pageHeader";
+import Image from "next/image";
 
-function page() {
+function Technology() {
   const technologys = data.technology;
 
   const [activeTab, setActiveTab] = useState(0);
@@ -46,14 +47,21 @@ function page() {
                       className="w-full mb-4 md:mb-6 lg:flex lg:justify-end"
                     >
                       {/* image below is only for mobile and tablet */}
-                      <img
-                        className="w-full h-[170px] md:h-[310px] lg:hidden"
+                      <Image
+                        width={1024}
+                        height={170}
                         src={technology.images.landscape}
+                        alt={technology.images.landscape}
+                        className="w-full h-[170px] md:h-[310px] lg:hidden"
                       />
+
                       {/* image below is only for large displays */}
-                      <img
-                        className=" hidden md:hidden lg:block lg:h-[450px]"
+                      <Image
                         src={technology.images.portrait}
+                        width={1440}
+                        height={450}
+                        alt={technology.images.portrait}
+                        className=" hidden md:hidden lg:block lg:h-[450px]"
                       />
                     </div>
                   </Transition>
@@ -113,4 +121,4 @@ function page() {
   );
 }
 
-export default page;
+export default Technology;

@@ -5,8 +5,9 @@ import React, { Fragment, useState } from "react";
 import Typewriter from "typewriter-effect";
 import BackgroundImage from "../ui/components/backgroundImage";
 import PageHeader from "../ui/components/pageHeader";
+import Image from "next/image";
 
-function page() {
+function Destination() {
   const destinations = data.destinations;
 
   const [activeTab, setActiveTab] = useState(0);
@@ -45,9 +46,12 @@ function page() {
                       key={index}
                       className="md:mb-6 lg:w-1/2 lg:flex lg:justify-center lg:ml-14 xl:ml-14"
                     >
-                      <img
-                        className="w-[170px] h-[170px] md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px] xl:w-[450px] xl:h-[450px]"
+                      <Image
+                        width={450}
+                        height={450}
                         src={destination.images.png}
+                        alt={destination.images.png}
+                        className="w-[170px] h-[170px] md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px] xl:w-[450px] xl:h-[450px]"
                       />
                     </div>
                   </Transition>
@@ -142,4 +146,4 @@ function page() {
   );
 }
 
-export default page;
+export default Destination;

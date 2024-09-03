@@ -6,8 +6,9 @@ import { Tab, Transition } from "@headlessui/react";
 import Typewriter from "typewriter-effect";
 import BackgroundImage from "../ui/components/backgroundImage";
 import PageHeader from "../ui/components/pageHeader";
+import Image from "next/image";
 
-function page() {
+function Crew() {
   const crews = data.crew;
 
   const [activeTab, setActiveTab] = useState(0);
@@ -46,9 +47,12 @@ function page() {
                       key={index}
                       className="w-[327px] h-[223px] mx-auto border-b border-white/15  md:w-[467px] md:h-2/3 md:border-0 lg:w-[40%] lg:h-[95%]"
                     >
-                      <img
-                        className=" mx-auto w-[200px] h-[223px] md:w-full md:h-full "
+                      <Image
+                        width={200}
+                        height={200}
                         src={crew.images.png}
+                        alt={crew.images.png}
+                        className="mx-auto w-[200px] h-[223px] md:w-full md:h-full "
                       />
                     </div>
 
@@ -117,4 +121,4 @@ function page() {
   );
 }
 
-export default page;
+export default Crew;
