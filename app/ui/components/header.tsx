@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
 
@@ -26,11 +26,14 @@ const Header = ({
 
   return (
     <header className="max-w-full mt-7 ml-5 relative  z-10 mb-[50px] md:max-w-full md:mt-0 md:h-20 md:flex md:items-center md:mb-12 lg:top-9 xl:top-9 ">
-      <img
+      <Image
+        height={48}
+        width={48}
+        alt={logoSrcurl}
         src={logoSrcurl}
-        alt="Page logo"
         className="md:w-[48px] md:h-[48px]"
       />
+
       {/* div below is the line that stretches between the header and the nav bar */}
       <div className="hidden md:hidden lg:block lg:bg-white/30 lg:w-full lg:h-[1px] lg:ml-24 lg:mr-[720px]"></div>
       <button
